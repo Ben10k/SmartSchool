@@ -1,25 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Runtime.InteropServices;
 
-namespace access_control
+namespace SmartSchool.rfid
 {
     class Convertor
     {
         private struct ISO14443A_CARD_INFO
         {
-            [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = 6)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
             public byte[] arrKey;
 
-            [MarshalAsAttribute(UnmanagedType.U1)]
+            [MarshalAs(UnmanagedType.U1)]
             public byte bIsKeyB;
 
-            [MarshalAsAttribute(UnmanagedType.U4)]
+            [MarshalAs(UnmanagedType.U4)]
             public UInt32 nStartSect;
 
-            [MarshalAsAttribute(UnmanagedType.U4)]
+            [MarshalAs(UnmanagedType.U4)]
             public UInt32 nNrSect;
         }
 

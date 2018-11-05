@@ -8,39 +8,54 @@
         Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="21*"/>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="104*"/>
+            <ColumnDefinition Width="21*" />
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="104*" />
         </Grid.ColumnDefinitions>
         <TabControl HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="3">
             <TabItem x:Name="MenuTab" Header="Menu">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="52*"/>
-                        <ColumnDefinition Width="341*"/>
+                        <ColumnDefinition Width="52*" />
+                        <ColumnDefinition Width="341*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="AttendanceRegistrationButton" Content="Attendance registration" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Width="150" Click="AttendanceRegistrationButton_OnClick" Grid.ColumnSpan="2"/>
-                    <Button x:Name="AttendanceReviewButton" Content="Attendance review" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Width="150" Click="AttendanceReviewButton_OnClick" Grid.ColumnSpan="2"/>
-                    <Button x:Name="VendingMachineButton" Content="Vending machine" HorizontalAlignment="Left" Margin="196,100,0,0" VerticalAlignment="Top" Width="150" Click="VendingMachineButton_OnClick" Grid.Column="1"/>
-                    <Button x:Name="PurchaseHistoryButton" Content="Purchase history" HorizontalAlignment="Left" Margin="196,200,0,0" VerticalAlignment="Top" Width="150" Click="PurchaseHistoryButton_OnClick" Grid.Column="1"/>
+                    <Button x:Name="AttendanceRegistrationButton" Content="Attendance registration"
+                            HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Width="150"
+                            Click="AttendanceRegistrationButton_OnClick" Grid.ColumnSpan="2" />
+                    <Button x:Name="AttendanceReviewButton" Content="Attendance review" HorizontalAlignment="Left"
+                            Margin="100,200,0,0" VerticalAlignment="Top" Width="150"
+                            Click="AttendanceReviewButton_OnClick" Grid.ColumnSpan="2" />
+                    <Button x:Name="VendingMachineButton" Content="Vending machine" HorizontalAlignment="Left"
+                            Margin="196,100,0,0" VerticalAlignment="Top" Width="150"
+                            Click="VendingMachineButton_OnClick" Grid.Column="1" />
+                    <Button x:Name="PurchaseHistoryButton" Content="Purchase history" HorizontalAlignment="Left"
+                            Margin="196,200,0,0" VerticalAlignment="Top" Width="150"
+                            Click="PurchaseHistoryButton_OnClick" Grid.Column="1" />
                 </Grid>
             </TabItem>
             <TabItem x:Name="AttendanceRegistrationTab" Header="Attendance registration" IsEnabled="False">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="103*"/>
-                        <ColumnDefinition Width="290*"/>
+                        <ColumnDefinition Width="103*" />
+                        <ColumnDefinition Width="290*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="AttendanceRegistration2MenuButton" Content="Menu" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="150" Click="AttendanceRegistration2MenuButton_OnClick"/>
-                    <Label x:Name="AttendanceRegistrationLabel" Content="WAITING" HorizontalAlignment="Left" Margin="165,149,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <Button x:Name="AttendanceRegistration2MenuButton" Content="Menu" HorizontalAlignment="Left"
+                            Margin="10,20,0,0" VerticalAlignment="Top" Width="150"
+                            Click="AttendanceRegistration2MenuButton_OnClick" />
+                    <Label x:Name="AttendanceRegistrationLabel" Content="WAITING" HorizontalAlignment="Left"
+                           Margin="165,149,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"
+                           Grid.ColumnSpan="2" />
 
                 </Grid>
             </TabItem>
             <TabItem x:Name="AttendanceReviewTab" Header="Attendance review" IsEnabled="False">
                 <Grid Background="#FFE5E5E5">
-                    <Button x:Name="AttendanceReview2MenuButton" Content="Menu" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="150" Click="AttendanceReview2MenuButton_OnClick"/>
-                    <Label x:Name="AttendanceReviewLabel" Content="Supply a card" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
-                    <ListBox x:Name="AttendanceReviewListBox" Margin="10,108,10,10"/>
+                    <Button x:Name="AttendanceReview2MenuButton" Content="Menu" HorizontalAlignment="Left"
+                            Margin="10,20,0,0" VerticalAlignment="Top" Width="150"
+                            Click="AttendanceReview2MenuButton_OnClick" />
+                    <Label x:Name="AttendanceReviewLabel" Content="Supply a card" HorizontalAlignment="Left"
+                           Margin="10,45,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" />
+                    <ListBox x:Name="AttendanceReviewListBox" Margin="10,108,10,10" />
 
                 </Grid>
 
@@ -48,23 +63,41 @@
             <TabItem x:Name="VendingMachineTab" Header="Vending machine" IsEnabled="False">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="5*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="VendingMachine2MenuButton" Content="Menu" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="150" Click="VendingMachine2MenuButton_OnClick"  Grid.ColumnSpan="2"/>
+                    <Button x:Name="VendingMachine2MenuButton" Content="Menu" HorizontalAlignment="Left"
+                            Margin="10,20,0,0" VerticalAlignment="Top" Width="150"
+                            Click="VendingMachine2MenuButton_OnClick" Grid.ColumnSpan="2" />
+                    <DataGrid x:Name="VendingMachineDataGrid" HorizontalAlignment="Left" Height="336"
+                              Margin="10,45,0,0" VerticalAlignment="Top" Width="766" Grid.ColumnSpan="2"
+                              Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="false">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                            <DataGridTemplateColumn MinWidth="100" Header="View">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Click="BuyProduct_OnClick">Buy</Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem  x:Name="PurchaseHistoryTab"  Header="Purchase history" IsEnabled="False">
+            <TabItem x:Name="PurchaseHistoryTab" Header="Purchase history" IsEnabled="False">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="35*"/>
-                        <ColumnDefinition Width="96*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button x:Name="PurchaseHistory2MenuButton" Content="Menu" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="150" Click="PurchaseHistory2MenuButton_OnClick"/>
+                    <Button x:Name="PurchaseHistory2MenuButton" Content="Menu" HorizontalAlignment="Left"
+                            Margin="10,20,0,0" VerticalAlignment="Top" Width="150"
+                            Click="PurchaseHistory2MenuButton_OnClick" />
+                    <Label x:Name="PurchaseHistoryLabel" Content="Supply a card" HorizontalAlignment="Left"
+                           Margin="10,45,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" />
+                    <ListBox x:Name="PurchaseHistoryListBox" Margin="10,108,10,10" />
                 </Grid>
             </TabItem>
         </TabControl>
-        <ScrollBar Grid.Column="2" HorizontalAlignment="Left" Margin="226,-15,0,0" VerticalAlignment="Top"/>
+        <ScrollBar Grid.Column="2" HorizontalAlignment="Left" Margin="226,-15,0,0" VerticalAlignment="Top" />
 
     </Grid>
 </Window>
